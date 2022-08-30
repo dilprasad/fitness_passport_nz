@@ -31,7 +31,7 @@ The PR title should also look like "FPNZ-1234_<task title>: Yyy", Yyy is be the 
 PR should be reviewed, and merged in a squashed way to make the commit history linear.
 
 
-Before code build for Android
+**Before code build for Android**
 
 Please add the API KEY for google map in local.properties, this key is for debugging from client's google account.
 Please note that this is a temporary way.
@@ -41,6 +41,7 @@ gradle file then remove the info from local.properties.
 
 
 **TODOs**
+  
 Add different build variant, e.g. DEBUG and RELEASE
 Keystores and Signing for RELEASE build
 Provisionning profile creation and certifcates
@@ -73,7 +74,7 @@ Project Play Book **
 
 A google official tool for testing accessibility app https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor
 
-Rules to follow on Android app
+**Rules to follow on Android app**
 
 https://www.w3.org/WAI/standards-guidelines/mobile/
 
@@ -89,13 +90,13 @@ Google maps completion https://developers.google.com/maps/documentation/places/w
 
 https://developers.google.com/maps/documentation/places/web-service/autocomplete
 
-Rules to follow on iOS app
+**Rules to follow on iOS app**
 
 https://developer.apple.com/app-store/guidelines/
 
 https://developer.apple.com/app-store/articles/
 
-Flutter Guidelines
+**Flutter Guidelines**
 
 Flutter official dev guide https://docs.flutter.dev
 
