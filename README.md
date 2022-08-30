@@ -22,13 +22,17 @@ README.md: This file.
 Create your own working branch(from the development branch), naming convetion should be:
 FPNZ-1234_<task-title>
 In which 1234 is the ticket number from Jira.
+
 Commit on the branch, test your code. Commits log should look like "FPNZ-1234_<task title>: Commit message"
+
 If code works well and all the Accept Criterias(ACs) of the tickets has been satisfied, create pull request(PR).
+
 The PR title should also look like "FPNZ-1234_<task title>: Yyy", Yyy is be the general description of the ticket.
 PR should be reviewed, and merged in a squashed way to make the commit history linear.
 
 
 Before code build for Android
+
 Please add the API KEY for google map in local.properties, this key is for debugging from client's google account.
 Please note that this is a temporary way.
 MAPS_API_KEY= **tobe filled**
@@ -46,30 +50,55 @@ Pipeline deployment, iOS TestFlight setup, google beta test set up
 
 
 ## Project Resources
+
 UI for FitnessPassport NZ App **
+
 Jira Board https://fitnesspassport.atlassian.net/jira/software/c/projects/FPNZ/boards/5
+
 FPNZ mobile app MVP estimation https://docs.google.com/spreadsheets/d/1jxcncVuc7Kvo0Sc_1M-I2xifCqMf_Cb3vHNNVXGqA5Y/edit#gid=0
+
 FPNZ drive assets https://drive.google.com/drive/u/6/folders/1ZTIkrYZogxUp14tKlXiOsbxjaOsJpJlu
+
 FPNZ detail project timeline https://docs.google.com/spreadsheets/d/1gcjomteFW-dEH8SG_CY-78IlelGG4b_HayA2CZ2vW3s/edit#gid=0
+
 FPNZ member mobile app TL sheet https://docs.google.com/spreadsheets/d/1Rej5hLE1qiKCf2clwEGQg4_CCZfgYkxQ51LSXXoCzJY/edit#gid=548825306
+
 FPNZ apple developer https://appstoreconnect.apple.com/get_started
+
 FPNZ google developer https://play.google.com/console/u/6/developers/5793254859428631973/app-list?onboardingflow=signup
+
 FP AWS account https://fitpassdev.signin.aws.amazon.com/console
+
 Project Play Book **
 
 A google official tool for testing accessibility app https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor
+
 Rules to follow on Android app
+
 https://www.w3.org/WAI/standards-guidelines/mobile/
+
 https://mobilea11y.com/resources/
+
 https://developer.android.com/guide/topics/ui/accessibility
+
 https://developer.android.com/guide/topics/ui/accessibility/apps
+
 https://material.io/design/usability/accessibility.html#understanding-accessibility
-Google maps completion https://developers.google.com/maps/documentation/places/web-service/search https://developers.google.com/maps/documentation/places/web-service/autocomplete
+
+Google maps completion https://developers.google.com/maps/documentation/places/web-service/search 
+
+https://developers.google.com/maps/documentation/places/web-service/autocomplete
+
 Rules to follow on iOS app
+
 https://developer.apple.com/app-store/guidelines/
+
 https://developer.apple.com/app-store/articles/
+
 Flutter Guidelines
+
 Flutter official dev guide https://docs.flutter.dev
+
 Flutter official package guide https://pub.dev
 
 ## Getting Started
