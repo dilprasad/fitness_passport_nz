@@ -26,9 +26,6 @@ In which 1234 is the ticket number from Jira.
 
 Commit on the branch, test your code. Commits log should look like "FPNZ-1234_<task title>: Commit message".
 If code works well and all the Accept Criteria (ACs) of the tickets has been satisfied, create pull request(PR).
->>>>>>> Stashed changes
-The PR title should also look like "FPNZ-1234_<task title>: Yyy", Yyy is be the general description of the ticket.
-PR should be reviewed, and merged in a squashed way to make the commit history linear.
 
 
 **Before code build for Android**
