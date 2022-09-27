@@ -40,6 +40,7 @@ dependencies:
   persistent_bottom_nav_bar_v2: ^4.2.5
   connectivity_plus: ^2.3.7
   shared_preferences: ^2.0.15
+  flutter_native_splash: ^2.2.10+1
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +55,16 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+flutter_native_splash:
+  color: "#0093D3"
+  image: assets/images/fp_logo_2x.png
+  android: true
+  ios: true
+
+  android_12:
+    image: assets/images/fp_logo_2x.png
+    color: "#0093D3"
 
 # The following section is specific to Flutter packages.
 flutter:
