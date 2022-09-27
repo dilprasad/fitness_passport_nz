@@ -4,16 +4,17 @@ A new Flutter project for fitness-passport-nz mobile app
 
 **Repo and branches**
 Download code from Bitbucket https://github.com/dilprasad/FP-NZ_Mobile-App
-The default branch name is "master", this is also the main-clean branch. Use "develop" branch for developers, all Active/Draft PR's of feature/bugfix/test should be merged to this branch.
+The default branch name is "master", this is also the main-clean branch. 
+Use "develop" branch for developers, all Active/Draft PR's of feature/bugfix/test should be merged to this branch.
 
 
 ## Project Structure
 
 The top-level of the project consists of below parts:
-fpnz-flutter: Flutter version 3.0.5 as of 30th August 2022, can be updagraded as development goes along.
+fpnz-flutter: Flutter version 3.3.1 as of 14th September 2022, can be upgraded as development goes along.
 Android project: supports with kotlin, Android version supports from Android 'O'.
 iOS project: supports with Swift, iOS version supports from iOS '13'.
-.gitignore: The top-level git ingored file, there are seperated ignore file in Android and iOS project
+.gitignore: The top-level git ignored file, there are separated ignore file in Android and iOS project
 README.md: This file.
 
 
@@ -23,10 +24,9 @@ Create your own working branch(from the development branch), naming convetion sh
 FPNZ-1234_<task-title>
 In which 1234 is the ticket number from Jira.
 
-Commit on the branch, test your code. Commits log should look like "FPNZ-1234_<task title>: Commit message"
-
-If code works well and all the Accept Criterias(ACs) of the tickets has been satisfied, create pull request(PR).
-
+Commit on the branch, test your code. Commits log should look like "FPNZ-1234_<task title>: Commit message".
+If code works well and all the Accept Criteria (ACs) of the tickets has been satisfied, create pull request(PR).
+>>>>>>> Stashed changes
 The PR title should also look like "FPNZ-1234_<task title>: Yyy", Yyy is be the general description of the ticket.
 PR should be reviewed, and merged in a squashed way to make the commit history linear.
 
@@ -43,8 +43,8 @@ gradle file then remove the info from local.properties.
 **TODOs**
   
 Add different build variant, e.g. DEBUG and RELEASE
-Keystores and Signing for RELEASE build
-Provisionning profile creation and certifcates
+Key-stores and Signing for RELEASE build
+Provisioning profile creation and certificates
 Google maps API and services setup
 AWS API test with test environment and production environment
 Pipeline deployment, iOS TestFlight setup, google beta test set up
