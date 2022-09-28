@@ -1,3 +1,4 @@
+import 'package:FitnessPassport/utils/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 /// reference to font sizes in styles
@@ -43,10 +44,17 @@ const TextStyle tHeader4 = TextStyle(
 );
 
 /// can have semi bold, medium and regular
-const TextStyle tSubTitle = TextStyle(
+const TextStyle tSubTitle1 = TextStyle(
   fontSize: 18.0,
   fontWeight: FontWeight.w700,
   fontFamily: "Arial",
+);
+
+const TextStyle tSubTitle2 = TextStyle(
+  fontSize: 15.0,
+  fontWeight: FontWeight.w400,
+  fontFamily: "Arial",
+  // color: CustomColors.white01,
 );
 
 /// can have semi bold, medium and regular

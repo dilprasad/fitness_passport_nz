@@ -14,6 +14,15 @@ class CustomColors {
   static const Color secondaryLight = Color(0xFF9DCEFF);
   static const Color secondaryDark = Color(0xFF92A3FD);
 
+  //text colors
+  static const Color white01 = Color(0xFFFFFDFD);
+  static const Color white02 = Color(0xFFFBF6F6);
+  static const Color white03 = Color(0xFFF2F2F2);
+  static const Color grey01 = Color(0xFFADA4A5);
+  static const Color grey02 = Color(0xFF7B6F72);
+  static const Color black01 = Color(0xFF000000);
+  static const Color blue01 = Color(0xFF0593D1);
+
   // static const Color primaryDarkBlue = Color(0xFF0A273E);
   // static const Color primaryOrange = Color(0xFFC56D1D);
   // static const Color primaryGreen = Color(0xFF80C070);

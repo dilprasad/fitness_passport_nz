@@ -11,7 +11,7 @@ Use "develop" branch for developers, all Active/Draft PR's of feature/bugfix/tes
 ## Project Structure
 
 The top-level of the project consists of below parts:
-fpnz-flutter: Flutter version 3.3.1 as of 14th September 2022, can be upgraded as development goes along.
+fpnz-flutter: Flutter version 3.3.2 as of 14th September 2022, can be upgraded as development goes along.
 Android project: supports with kotlin, Android version supports from Android 'O'.
 iOS project: supports with Swift, iOS version supports from iOS '13'.
 .gitignore: The top-level git ignored file, there are separated ignore file in Android and iOS project

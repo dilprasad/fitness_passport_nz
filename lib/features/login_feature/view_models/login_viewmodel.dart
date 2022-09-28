@@ -15,6 +15,9 @@ class LoginViewModel extends ChangeNotifier {
   bool _signUpLoading = false;
   bool get signUpLoading => _signUpLoading;
 
+  bool _isObscure = true;
+  bool get isObscure => _isObscure;
+
   setLoading(bool value) {
     _loading = value;
     notifyListeners();
@@ -22,6 +25,11 @@ class LoginViewModel extends ChangeNotifier {
 
   setSignUpLoading(bool value) {
     _signUpLoading = value;
+    notifyListeners();
+  }
+
+  setObscure(bool obscure) {
+    _isObscure = !_isObscure;
     notifyListeners();
   }
 

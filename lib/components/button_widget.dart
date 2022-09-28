@@ -1,155 +1,177 @@
-import 'dart:async';
+// import 'dart:async';
 
+import 'package:FitnessPassport/components/label_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../core/globals/constants.dart';
 import '../utils/themes/colors.dart';
 import '../utils/themes/text_styles.dart';
 
-class ButtonWidget extends StatefulWidget {
+class Button extends StatefulWidget {
   //
   final String? text;
   final Color? btnColor;
   final Color? borderColor;
   final Color? textColor;
   final Function? onPressed;
-  final EButtonType;
-  final EButtonState;
+  final EButtonType? eButtonType;
+  final EButtonState? eButtonState;
   final IconData? iconData;
 
-  const ButtonWidget({
+  const Button({
     Key? key,
-    this.text,
-    this.btnColor,
-    this.borderColor,
-    this.textColor,
-    this.EButtonType,
-    this.iconData,
-    @required this.EButtonState,
+    @required this.text,
+    @required this.textColor,
+    @required this.btnColor,
+    @required this.borderColor,
+    @required this.eButtonType,
+    @required this.eButtonState,
     @required this.onPressed,
+    this.iconData,
   }) : super(key: key);
 
   @override
-  _ButtonWidgetState createState() => _ButtonWidgetState();
+  _ButtonState createState() => _ButtonState();
 }
 
-class _ButtonWidgetState extends State<ButtonWidget>
-    with SingleTickerProviderStateMixin {
+class _ButtonState extends State<Button> with SingleTickerProviderStateMixin {
   late double _scale;
-  late AnimationController _controller;
+  // late AnimationController _controller;
 
   @override
   void initState() {
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(
-        milliseconds: 100,
-      ),
-      upperBound: 0.1,
-    )..addListener(() {
-        setState(() {});
-      });
+    // _controller = AnimationController(
+    //   vsync: this,
+    //   duration: const Duration(
+    //     milliseconds: 100,
+    //   ),
+    //   upperBound: 0.1,
+    // )..addListener(() {
+    //     setState(() {});
+    //   });
     super.initState();
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _controller.dispose();
+  //   super.dispose();
+  // }
 
-  void buttonHandler() {
-    _controller.forward();
-    Timer(const Duration(milliseconds: 50), () {
-      _controller.reverse();
-    });
-    Timer(const Duration(milliseconds: 50), () {
-      widget.onPressed!();
-    });
-  }
+  // void buttonHandler() {
+  //   _controller.forward();
+  //   Timer(const Duration(milliseconds: 50), () {
+  //     _controller.reverse();
+  //   });
+  //   Timer(const Duration(milliseconds: 50), () {
+  //     widget.onPressed!();
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    _scale = 1 - _controller.value;
-    return Transform.scale(
-      scale: _scale,
-      child: ElevatedButton(
-        style: TextButton.styleFrom(
-          elevation: widget.EButtonState == EButtonState.bActive ? 2.0 : 0.0,
-          primary: widget.EButtonState == EButtonState.bActive
-              ? widget.btnColor!
-              : CustomColors.greyLight,
-          backgroundColor: widget.EButtonState == EButtonState.bActive
-              ? widget.btnColor!
-              : CustomColors.greyLight,
-          minimumSize: const Size(80.0, 50.0),
-          maximumSize: const Size(104, 50.0),
-          shape: RoundedRectangleBorder(
-            side: BorderSide(
-              color: widget.EButtonState == EButtonState.bActive
-                  ? widget.borderColor!
-                  : CustomColors.greyLight,
-              width: 2,
-            ),
-            borderRadius: BorderRadius.circular(16.0),
+    final h = MediaQuery.of(context).size.height;
+    final w = MediaQuery.of(context).size.width;
+    // _scale = 1 - _controller.value;
+    return
+        // Transform.scale(
+        // scale: _scale,
+        // child:
+        TextButton(
+      style: TextButton.styleFrom(
+        // foregroundColor: widget.eButtonState == EButtonState.bActive
+        //     ? widget.btnColor!
+        //     : CustomColors.greyLight,
+        // elevation: widget.eButtonState == EButtonState.bActive ? 2.0 : 0.0,
+        backgroundColor: widget.eButtonState == EButtonState.bActive
+            ? widget.btnColor!
+            : CustomColors.greyLight,
+        minimumSize: Size(
+          w,
+          60.0,
+        ), //const Size(80.0, 50.0),
+        // maximumSize: const Size(104, 60.0),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color: widget.eButtonState == EButtonState.bActive
+                ? widget.borderColor!
+                : CustomColors.greyLight,
+            width: 2,
           ),
-          splashFactory: NoSplash.splashFactory,
+          borderRadius: BorderRadius.circular(100.0),
         ),
-        onPressed: () => widget.EButtonState == EButtonState.bActive
-            ? buttonHandler()
-            : null,
-        child: widget.EButtonState == EButtonState.bLoading
-            ? Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  CircularProgressIndicator(
-                    color: CustomColors.greyLight,
-                    backgroundColor: Colors.transparent,
-                  ),
-                ],
-              )
-            : (widget.EButtonType == EButtonType.bText
-                ? Text(
-                    widget.text!,
-                    style: tButtonMedium.copyWith(
-                      color: widget.EButtonState == EButtonState.bActive
-                          ? widget.textColor!
-                          : CustomColors.greyLight,
-                    ),
-                    textAlign: TextAlign.center,
-                    textScaleFactor: 1.0,
-                  )
-                : (widget.EButtonType == EButtonType.bIconText)
-                    ? Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(
-                            widget.iconData,
-                            color: widget.EButtonState == EButtonState.bActive
-                                ? widget.textColor
-                                : CustomColors.greyLight,
-                          ),
-                          const Spacer(),
-                          Text(
-                            widget.text!,
-                            style: tButtonMedium.copyWith(
-                              color: widget.EButtonState == EButtonState.bActive
-                                  ? widget.textColor!
-                                  : CustomColors.greyLight,
-                            ),
-                            textAlign: TextAlign.center,
-                            textScaleFactor: 1.0,
-                          ),
-                          Spacer(),
-                        ],
-                      )
-                    : Icon(
-                        widget.iconData,
-                        color: widget.EButtonState == EButtonState.bActive
-                            ? CustomColors.primaryWhite
-                            : CustomColors.greyLight,
-                      )),
+        splashFactory: NoSplash.splashFactory,
       ),
+      onPressed: () => widget.eButtonState == EButtonState.bActive
+          ? widget.onPressed!()
+          //buttonHandler()
+          : null,
+      child: widget.eButtonState == EButtonState.bLoading
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                CircularProgressIndicator(
+                  color: CustomColors.greyLight,
+                  backgroundColor: Colors.transparent,
+                ),
+              ],
+            )
+          : (widget.eButtonType == EButtonType.bText
+              ? Label(
+                  text: widget.text,
+                  fontStyle: tLargeText,
+                  textColor: widget.eButtonState == EButtonState.bActive
+                      ? widget.textColor!
+                      : CustomColors.greyLight,
+                )
+              // Text(
+              //             widget.text!,
+              //             style: tButtonMedium.copyWith(
+              //               color: widget.eButtonState == EButtonState.bActive
+              //                   ? widget.textColor!
+              //                   : CustomColors.greyLight,
+              //             ),
+              //             textAlign: TextAlign.center,
+              //             textScaleFactor: 1.0,
+              //           )
+              : (widget.eButtonType == EButtonType.bIconText)
+                  ? Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          widget.iconData,
+                          color: widget.eButtonState == EButtonState.bActive
+                              ? widget.textColor
+                              : CustomColors.greyLight,
+                        ),
+                        const Spacer(),
+                        Label(
+                          text: widget.text!,
+                          fontStyle: tButtonMedium,
+                          textColor: widget.eButtonState == EButtonState.bActive
+                              ? widget.textColor!
+                              : CustomColors.greyLight,
+                        ),
+                        // Text(
+                        //   widget.text!,
+                        //   style: tButtonMedium.copyWith(
+                        //     color: widget.eButtonState == EButtonState.bActive
+                        //         ? widget.textColor!
+                        //         : CustomColors.greyLight,
+                        //   ),
+                        //   textAlign: TextAlign.center,
+                        //   textScaleFactor: 1.0,
+                        // ),
+                        const Spacer(),
+                      ],
+                    )
+                  : Icon(
+                      widget.iconData,
+                      color: widget.eButtonState == EButtonState.bActive
+                          ? CustomColors.primaryWhite
+                          : CustomColors.greyLight,
+                    )),
+      // ),
     );
   }
 }
