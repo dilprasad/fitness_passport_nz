@@ -21,18 +21,15 @@ class _LoginViewState extends State<LoginView> {
   SizedBox sizeBox(double size) => SizedBox(height: size);
 
   TextField emailInput() => TextField(
-        decoration: decoInput(
-          'Email',
-          IconlyLight.message,
-        ),
+        decoration:
+            decoInput('Email', IconlyLight.message, CustomColors.bgWhite),
       );
 
   TextField passwordInput() => TextField(
         obscureText: _isObscure,
-        decoration: decoInput(
-          'Password',
-          IconlyLight.lock,
-        ).copyWith(
+        decoration:
+            decoInput('Password', IconlyLight.lock, CustomColors.bgWhite)
+                .copyWith(
           suffixIcon: IconButton(
             icon: Icon(
               _isObscure

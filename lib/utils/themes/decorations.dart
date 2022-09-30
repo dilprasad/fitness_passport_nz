@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
-InputDecoration decoInput(String? text, IconData iconData) => InputDecoration(
+InputDecoration decoInput(String? text, IconData iconData, Color fillColor) =>
+    InputDecoration(
       filled: true,
-      fillColor: CustomColors.bgWhite,
+      fillColor: fillColor,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15.0),
         borderSide: BorderSide.none,

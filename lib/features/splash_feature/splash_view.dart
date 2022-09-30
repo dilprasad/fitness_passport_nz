@@ -1,5 +1,6 @@
 import 'package:FitnessPassport/core/globals/constants.dart';
 import 'package:FitnessPassport/features/home_feature/home_view.dart';
+import 'package:FitnessPassport/features/login_feature/views/create_new_password_view.dart';
 import 'package:FitnessPassport/features/login_feature/views/login_view.dart';
 import 'package:FitnessPassport/features/home_feature/main_page.dart';
 import 'package:FitnessPassport/features/login_feature/views/registration_success_view.dart';
@@ -39,7 +40,7 @@ class _SplashViewState extends State<SplashView> {
   navigateToLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const RegistrationSuccessView()),
+      MaterialPageRoute(builder: (context) => const CreateNewPasswordView()),
       // MaterialPageRoute(
       //     builder: (context) => const ProfileView(
       //           hideStatus: false,
