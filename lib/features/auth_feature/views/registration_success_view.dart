@@ -10,14 +10,14 @@ class RegistrationSuccessView extends StatelessWidget {
 
   SizedBox sizeBox(double size) => SizedBox(height: size);
 
-  Button getStartedButton() => Button(
+  ButtonWidget getStartedButton() => ButtonWidget(
         eButtonState: EButtonState.bActive,
         onPressed: () {},
         text: 'Get Started',
         textColor: CustomColors.blue01,
         btnColor: CustomColors.primaryWhite,
         borderColor: CustomColors.primaryWhite,
-        eButtonType: EButtonType.bText,
+        // eButtonType: EButtonType.bText,
       );
 
   @override

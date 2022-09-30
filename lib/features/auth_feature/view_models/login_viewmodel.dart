@@ -1,9 +1,5 @@
-import 'package:FitnessPassport/features/login_feature/view_models/user_viewmodel.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../models/user.dart';
 import '../repository/auth_repository.dart';
 
 class LoginViewModel extends ChangeNotifier {

@@ -65,9 +65,15 @@ const TextStyle tLargeText = TextStyle(
 );
 
 /// can have semi bold, medium and regular
-const TextStyle tMediumText = TextStyle(
+const TextStyle tMediumText1 = TextStyle(
   fontSize: 14.0,
   fontWeight: FontWeight.w700,
+  fontFamily: "Arial",
+);
+
+const TextStyle tMediumText2 = TextStyle(
+  fontSize: 14.0,
+  fontWeight: FontWeight.w400,
   fontFamily: "Arial",
 );
 

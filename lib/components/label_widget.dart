@@ -6,7 +6,6 @@ class Label extends StatelessWidget {
     this.text,
     this.fontStyle,
     this.textColor,
-    // required this.size,
     this.textAlign,
     this.maxLines,
     this.overflow,
@@ -16,13 +15,10 @@ class Label extends StatelessWidget {
   final String? text;
   final TextStyle? fontStyle;
   final Color? textColor;
-  // final double size;
   final TextAlign? textAlign;
   final int? maxLines;
   final TextOverflow? overflow;
   final double? height;
-
-  // final FontFamily fontFamily;
 
   @override
   Widget build(BuildContext context) {
