@@ -1,6 +1,4 @@
 import 'package:FitnessPassport/core/globals/constants.dart';
-import 'package:FitnessPassport/features/home_feature/home_view.dart';
-import 'package:FitnessPassport/features/login_feature/views/login_view.dart';
 import 'package:FitnessPassport/features/home_feature/main_page.dart';
 import 'package:FitnessPassport/features/splash_feature/views/splash_offline_view.dart';
 import 'package:FitnessPassport/services/network/connection_check.dart';
