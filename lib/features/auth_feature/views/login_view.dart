@@ -72,24 +72,23 @@ class _LoginViewState extends State<LoginView> {
         // ),
       );
 
-  Button loginButton() => Button(
+  ButtonWidget loginButton() => ButtonWidget(
         eButtonState: EButtonState.bActive,
         onPressed: () {},
         text: 'Login',
         textColor: CustomColors.blue01,
         btnColor: CustomColors.primaryWhite,
         borderColor: CustomColors.primaryWhite,
-        eButtonType: EButtonType.bText,
       );
 
   @override
   Widget build(BuildContext context) {
     // final h = MediaQuery.of(context).size.height;
     // final w = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: CustomColors.bgBlue,
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: CustomColors.bgBlue,
+        body: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(
             horizontal: 30.0,
             vertical: 30.0,

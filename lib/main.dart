@@ -1,4 +1,3 @@
-import 'package:FitnessPassport/features/splash_feature/splash_view.dart';
 import 'package:FitnessPassport/services/network/connection_check.dart';
 import 'package:FitnessPassport/utils/themes/fp_theme.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +6,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 
 import 'core/globals/constants.dart';
-import 'features/login_feature/views/login_view.dart';
+import 'features/splash_feature/views/splash_view.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

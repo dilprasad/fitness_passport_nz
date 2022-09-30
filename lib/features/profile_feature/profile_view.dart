@@ -3,6 +3,8 @@ import 'package:FitnessPassport/utils/themes/colors.dart';
 import 'package:FitnessPassport/utils/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import '../../components/back_button_widget.dart';
+import 'widgets/profile_item_widget.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key, required bool hideStatus});
@@ -12,49 +14,6 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> {
-  Widget _profileItem(String text, IconData iconData) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Row(
-            children: [
-              Icon(
-                iconData,
-                color: CustomColors.bgWhite,
-              ),
-              const SizedBox(width: 20),
-              Label(
-                text: text,
-                fontStyle: tSubTitle2,
-                textColor: CustomColors.white01,
-              ),
-            ],
-          ),
-          const Icon(
-            Icons.arrow_forward_ios,
-            size: 12,
-            color: CustomColors.bgWhite,
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget _backButton() {
-    return Container(
-      width: 32.0,
-      height: 32.0,
-      decoration: const BoxDecoration(
-        color: CustomColors.bgWhite,
-        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-      ),
-      child: const Icon(Icons.arrow_back_ios,
-          size: 12, color: CustomColors.primaryBlack),
-    );
-  }
-
   Widget _profilePic() {
     return Container(
         height: 60.0,
@@ -72,10 +31,10 @@ class _ProfileViewState extends State<ProfileView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: CustomColors.bgBlue,
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: CustomColors.bgBlue,
+        body: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(
             horizontal: 40.0,
             vertical: 40.0,
@@ -85,14 +44,18 @@ class _ProfileViewState extends State<ProfileView> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _backButton(),
-                  const Label(
+                children: const [
+                  BackButtonWidget(
+                    btnColor: CustomColors.bgWhite,
+                    iconColor: CustomColors.primaryBlack,
+                    callBack: null,
+                  ),
+                  Label(
                     text: 'Profile',
                     fontStyle: tHeader2,
                     textColor: CustomColors.white02,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 32,
                     height: 32,
                   ),
@@ -140,10 +103,10 @@ class _ProfileViewState extends State<ProfileView> {
                     const SizedBox(
                       height: 15.0,
                     ),
-                    _profileItem("My Details", IconlyLight.profile),
-                    _profileItem("Membership", IconlyLight.wallet),
-                    _profileItem("Facilities", IconlyLight.location),
-                    _profileItem("Check-in", IconlyLight.scan),
+                    profileItem("My Details", IconlyLight.profile),
+                    profileItem("Membership", IconlyLight.wallet),
+                    profileItem("Facilities", IconlyLight.location),
+                    profileItem("Check-in", IconlyLight.scan),
                     const SizedBox(
                       height: 20.0,
                     ),
@@ -155,11 +118,11 @@ class _ProfileViewState extends State<ProfileView> {
                     const SizedBox(
                       height: 15.0,
                     ),
-                    _profileItem("Settings", IconlyLight.setting),
-                    _profileItem("Privacy Policy", IconlyLight.shield_done),
-                    _profileItem("Terms and Conditions", IconlyLight.lock),
-                    _profileItem("Contact us", IconlyLight.message),
-                    _profileItem("Logout", IconlyLight.logout),
+                    profileItem("Settings", IconlyLight.setting),
+                    profileItem("Privacy Policy", IconlyLight.shield_done),
+                    profileItem("Terms and Conditions", IconlyLight.lock),
+                    profileItem("Contact us", IconlyLight.message),
+                    profileItem("Logout", IconlyLight.logout),
                   ],
                 ),
               ),

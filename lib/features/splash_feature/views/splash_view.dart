@@ -1,9 +1,8 @@
 import 'package:FitnessPassport/core/globals/constants.dart';
-import 'package:FitnessPassport/features/home_feature/home_view.dart';
-import 'package:FitnessPassport/features/login_feature/views/login_view.dart';
+import 'package:FitnessPassport/features/auth_feature/views/forgot_password_code_view.dart';
+import 'package:FitnessPassport/features/auth_feature/views/forgot_password_main_view.dart';
 import 'package:FitnessPassport/features/home_feature/main_page.dart';
-import 'package:FitnessPassport/features/profile_feature/profile_view.dart';
-import 'package:FitnessPassport/features/splash_feature/splash_offline_view.dart';
+import 'package:FitnessPassport/features/splash_feature/views/splash_offline_view.dart';
 import 'package:FitnessPassport/services/network/connection_check.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -38,7 +37,10 @@ class _SplashViewState extends State<SplashView> {
   navigateToLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const MainPage()),
+      MaterialPageRoute(
+        builder: (context) => const ForgotPasswordCodeView(),
+        // const ForgotPasswordMainView(),
+      ),
       // MaterialPageRoute(
       //     builder: (context) => const ProfileView(
       //           hideStatus: false,
