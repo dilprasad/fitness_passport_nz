@@ -1,3 +1,4 @@
+import 'package:FitnessPassport/components/app_bar_widget.dart';
 import 'package:FitnessPassport/components/button_widget.dart';
 import 'package:FitnessPassport/components/label_widget.dart';
 import 'package:FitnessPassport/core/globals/constants.dart';
@@ -39,24 +40,24 @@ class _CreateNewPasswordViewState extends State<CreateNewPasswordView> {
         ),
       );
 
-  Button continueButton() => Button(
+  ButtonWidget continueButton() => ButtonWidget(
         eButtonState: EButtonState.bActive,
         onPressed: () {},
         text: 'Continue',
         textColor: CustomColors.white01,
         btnColor: CustomColors.blue01,
         borderColor: CustomColors.primaryWhite,
-        eButtonType: EButtonType.bText,
+        //eButtonType: EButtonType.bText,
       );
 
-  Button cancelButton() => Button(
+  ButtonWidget cancelButton() => ButtonWidget(
         eButtonState: EButtonState.bActive,
         onPressed: () {},
         text: 'Cancel',
         textColor: CustomColors.blue01,
         btnColor: CustomColors.greyLight,
         borderColor: CustomColors.primaryWhite,
-        eButtonType: EButtonType.bText,
+        //eButtonType: EButtonType.bText,
       );
 
   Widget _backButton() {
@@ -84,20 +85,25 @@ class _CreateNewPasswordViewState extends State<CreateNewPasswordView> {
           ),
           child: Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _backButton(),
-                  const Label(
-                    text: 'Create New Password',
-                    fontStyle: tHeader2,
-                    textColor: CustomColors.primaryBlue,
-                  ),
-                  const SizedBox(
-                    width: 32,
-                    height: 32,
-                  ),
-                ],
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     _backButton(),
+              //     const Label(
+              //       text: 'Create New Password',
+              //       fontStyle: tHeader2,
+              //       textColor: CustomColors.primaryBlue,
+              //     ),
+              //     const SizedBox(
+              //       width: 32,
+              //       height: 32,
+              //     ),
+              //   ],
+              // ),
+              const AppBarWidget(
+                title: 'Create New Password',
+                isLight: false,
+                onBack: null,
               ),
               sizeBox(40.0),
               Image.asset(
