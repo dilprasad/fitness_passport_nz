@@ -1,4 +1,5 @@
 import 'package:FitnessPassport/components/label_widget.dart';
+import 'package:FitnessPassport/components/profile_image_widget.dart';
 import 'package:FitnessPassport/utils/themes/colors.dart';
 import 'package:FitnessPassport/utils/themes/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -14,21 +15,6 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> {
-  Widget _profilePic() {
-    return Container(
-        height: 60.0,
-        width: 60.0,
-        decoration: const BoxDecoration(
-            color: CustomColors.bgWhite, shape: BoxShape.circle),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(80),
-          // child: Image.asset(
-          //   "assets/images/fp_logo_2x.png",
-          //   fit: BoxFit.cover,
-          // ),
-        ));
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,7 +52,7 @@ class _ProfileViewState extends State<ProfileView> {
               ),
               Row(
                 children: [
-                  _profilePic(),
+                  const ProfileImage(),
                   const SizedBox(
                     width: 10.0,
                   ),

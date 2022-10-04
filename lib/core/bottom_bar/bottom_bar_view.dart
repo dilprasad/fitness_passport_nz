@@ -1,6 +1,6 @@
 import 'package:FitnessPassport/features/checkin_feature/checkin_view.dart';
 import 'package:FitnessPassport/features/home_feature/home_view.dart';
-import 'package:FitnessPassport/features/membership_feature/membership_view.dart';
+import 'package:FitnessPassport/features/membership_feature/views/membership_view.dart';
 import 'package:FitnessPassport/features/profile_feature/profile_view.dart';
 import 'package:FitnessPassport/features/qrscan_feature/qrscan_view.dart';
 import 'package:FitnessPassport/utils/themes/colors.dart';

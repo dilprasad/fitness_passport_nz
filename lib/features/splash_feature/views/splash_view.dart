@@ -39,7 +39,7 @@ class _SplashViewState extends State<SplashView> {
   navigateToLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const CreateNewPasswordView()),
+      MaterialPageRoute(builder: (context) => const MainPage()),
       // MaterialPageRoute(
       //     builder: (context) => const ProfileView(
       //           hideStatus: false,
