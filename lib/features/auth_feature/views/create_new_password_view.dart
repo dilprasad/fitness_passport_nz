@@ -60,19 +60,6 @@ class _CreateNewPasswordViewState extends State<CreateNewPasswordView> {
         //eButtonType: EButtonType.bText,
       );
 
-  Widget _backButton() {
-    return Container(
-      width: 32.0,
-      height: 32.0,
-      decoration: const BoxDecoration(
-        color: CustomColors.primaryBlue,
-        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-      ),
-      child: const Icon(Icons.arrow_back_ios,
-          size: 12, color: CustomColors.white01),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,21 +72,6 @@ class _CreateNewPasswordViewState extends State<CreateNewPasswordView> {
           ),
           child: Column(
             children: <Widget>[
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //     _backButton(),
-              //     const Label(
-              //       text: 'Create New Password',
-              //       fontStyle: tHeader2,
-              //       textColor: CustomColors.primaryBlue,
-              //     ),
-              //     const SizedBox(
-              //       width: 32,
-              //       height: 32,
-              //     ),
-              //   ],
-              // ),
               const AppBarWidget(
                 title: 'Create New Password',
                 isLight: false,

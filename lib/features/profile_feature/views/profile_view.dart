@@ -52,9 +52,7 @@ class _ProfileViewState extends State<ProfileView> {
               ),
               Row(
                 children: [
-                  const ProfileImage(
-                    size: 60,
-                  ),
+                  const ProfileImage(),
                   const SizedBox(
                     width: 10.0,
                   ),

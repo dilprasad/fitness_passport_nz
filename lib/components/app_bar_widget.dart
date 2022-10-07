@@ -20,6 +20,7 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Expanded(
           child: BackButtonWidget(
@@ -34,7 +35,21 @@ class AppBarWidget extends StatelessWidget {
           fontStyle: tHeader2,
           textColor: CustomColors.blue01,
         ),
-        const Spacer(flex: 2)
+        const Spacer(flex: 2),
+        // BackButtonWidget(
+        //   btnColor: isLight ? CustomColors.bgWhite : CustomColors.bgBlue,
+        //   iconColor: isLight ? CustomColors.bgBlue : CustomColors.bgWhite,
+        //   callBack: onBack,
+        // ),
+        // Label(
+        //   text: title == null ? '' : title!,
+        //   fontStyle: tHeader2,
+        //   textColor: CustomColors.blue01,
+        // ),
+        // const SizedBox(
+        //   width: 32.0,
+        //   height: 32.0,
+        // )
       ],
     );
   }
