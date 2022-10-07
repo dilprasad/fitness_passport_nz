@@ -5,6 +5,9 @@ import 'package:FitnessPassport/utils/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
+import '../../features/home_feature/views/home_view.dart';
+import '../../features/profile_feature/views/profile_view.dart';
+
 class BottomBarView extends StatefulWidget {
   const BottomBarView({Key? key}) : super(key: key);
 
