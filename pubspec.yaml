@@ -43,6 +43,7 @@ dependencies:
   iconly: ^1.0.1
   flutter_native_splash: ^2.2.10+1
   pinput: ^2.2.12
+  timelines: ^0.1.0
 
 dev_dependencies:
   flutter_test:

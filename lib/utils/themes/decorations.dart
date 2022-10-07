@@ -17,3 +17,11 @@ InputDecoration decoInput(String? text, IconData iconData, Color fillColor) =>
         color: CustomColors.greyDark,
       ),
     );
+
+BoxDecoration decoWhiteBG() => const BoxDecoration(
+      color: CustomColors.primaryWhite,
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(40.0),
+        topRight: Radius.circular(40.0),
+      ),
+    );
