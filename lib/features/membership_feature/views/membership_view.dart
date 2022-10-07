@@ -30,6 +30,7 @@ class _MembershipViewState extends State<MembershipView> {
           return MemberListItem(
             memberName: members[index].memberName,
             isMemberPrimary: members[index].isPrimaryMember,
+            callBack: null,
           );
         },
         separatorBuilder: (context, index) {
