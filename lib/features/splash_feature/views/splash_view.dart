@@ -3,7 +3,7 @@ import 'package:FitnessPassport/features/auth_feature/views/create_new_password_
 import 'package:FitnessPassport/features/auth_feature/views/forgot_password_main_view.dart';
 import 'package:FitnessPassport/features/auth_feature/views/login_view.dart';
 import 'package:FitnessPassport/features/auth_feature/views/registration_success_view.dart';
-import 'package:FitnessPassport/features/home_feature/main_page.dart';
+import 'package:FitnessPassport/features/home_feature/views/main_page.dart';
 import 'package:FitnessPassport/features/splash_feature/views/splash_offline_view.dart';
 import 'package:FitnessPassport/services/network/connection_check.dart';
 import 'package:flutter/material.dart';

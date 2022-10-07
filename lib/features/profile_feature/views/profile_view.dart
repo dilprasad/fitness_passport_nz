@@ -4,8 +4,8 @@ import 'package:FitnessPassport/utils/themes/colors.dart';
 import 'package:FitnessPassport/utils/themes/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import '../../components/back_button_widget.dart';
-import 'widgets/profile_item_widget.dart';
+import '../../../components/back_button_widget.dart';
+import '../widgets/profile_item_widget.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key, required bool hideStatus});
