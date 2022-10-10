@@ -3,6 +3,7 @@ import 'package:FitnessPassport/features/auth_feature/views/create_new_password_
 import 'package:FitnessPassport/features/auth_feature/views/forgot_password_main_view.dart';
 import 'package:FitnessPassport/features/auth_feature/views/login_view.dart';
 import 'package:FitnessPassport/features/auth_feature/views/registration_success_view.dart';
+import 'package:FitnessPassport/features/checkin_feature/views/recent_activity_view.dart';
 import 'package:FitnessPassport/features/home_feature/views/main_page.dart';
 import 'package:FitnessPassport/features/splash_feature/views/splash_offline_view.dart';
 import 'package:FitnessPassport/services/network/connection_check.dart';
@@ -39,7 +40,7 @@ class _SplashViewState extends State<SplashView> {
   navigateToLogin() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const MainPage()),
+      MaterialPageRoute(builder: (context) => const RecentActivity()),
       // MaterialPageRoute(
       //     builder: (context) => const ProfileView(
       //           hideStatus: false,

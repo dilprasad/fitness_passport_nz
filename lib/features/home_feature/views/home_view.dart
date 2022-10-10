@@ -34,9 +34,7 @@ class _HomeViewState extends State<HomeView> {
                   'assets/images/fp_logo_2x.png',
                   width: 70.0,
                 ),
-                const ProfileImage(
-                  size: 40,
-                )
+                const ProfileImage()
               ],
             ),
             sizeBox(30.0),

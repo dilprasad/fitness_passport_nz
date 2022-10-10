@@ -57,6 +57,13 @@ const TextStyle tSubTitle2 = TextStyle(
   // color: CustomColors.white01,
 );
 
+const TextStyle tSubTitle3 = TextStyle(
+  fontSize: 12.0,
+  fontWeight: FontWeight.w400,
+  fontFamily: "Arial",
+  // color: CustomColors.white01,
+);
+
 /// can have semi bold, medium and regular
 const TextStyle tLargeText = TextStyle(
   fontSize: 16.0,
